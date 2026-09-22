@@ -448,3 +448,7 @@ body[data-motion='reduce'] .map-node {
 @media(max-width:760px){.hero{grid-template-columns:1fr;padding:2rem 1.5rem 1rem;gap:2rem}.work-map{padding:1rem}.system-diagram{max-height:none}.map-links small{font-size:.72rem}.hero h1{font-size:clamp(3.2rem,13vw,5.7rem)}}
 @media(prefers-reduced-motion:reduce){.hero-system .hero-module.is-related{transform:none}}
 body[data-motion=reduce] .hero-system .hero-module.is-related{transform:none}
+
+/* Construction bricks: raised round studs make the LEGO reference visual. */
+.brick-stud-side{fill:#527549;stroke:#b2cb8a;stroke-width:1}
+.brick-stud-top{fill:#b0cb85;stroke:#d5e5a2;stroke-width:1}
