@@ -21,3 +21,12 @@ if (filters) {
     document.querySelector('.filter-status').textContent = visible.length === 1 ? '1 caso disponible' : `${visible.length} casos disponibles`;
   });
 }
+function revealLinkedCase() {
+  const target = cases.find((item) => `#${item.id}` === window.location.hash);
+  if (!target) return;
+  if (target.hidden) filters.querySelector('[data-filter="all"]').click();
+  cases.forEach((item) => { item.open = item === target; });
+  target.scrollIntoView({block: 'start'});
+}
+window.addEventListener('hashchange', revealLinkedCase);
+revealLinkedCase();

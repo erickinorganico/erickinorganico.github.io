@@ -14,3 +14,6 @@
 @media(max-width:420px){.credentials{grid-template-columns:1fr}.credential-meta{display:flex}.credential-meta>span{margin:0}.hero-lede{max-width:330px}.chapter-nav>span{display:none}}
 .experience-list .role-line{color:var(--accent);font-size:.83rem;margin:0 0 15px}.agent-columns h3{line-height:1.2}
 .chapter-nav{scrollbar-width:none}.chapter-nav::-webkit-scrollbar{display:none}
+.runtime-feature{margin-top:45px;padding-top:30px;border-top:1px solid #52594e;max-width:960px}.runtime-feature h3{font-size:2rem;font-weight:500;letter-spacing:-.04em;margin:12px 0 15px}.runtime-feature p{max-width:780px;color:#c4c9be;font-size:.96rem;margin-bottom:22px}.runtime-feature .text-link span{color:#ed9b80}
+.case{scroll-margin-top:85px}
+.concepts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;border-top:1px solid var(--line);margin:8px 0 0;padding-top:25px}.concepts dt{font-size:.95rem;font-weight:650;margin-bottom:12px}.concepts dd{font-size:.9rem;color:var(--muted);line-height:1.65;margin:0}@media(max-width:800px){.concepts{display:block;margin-top:30px}.concepts>div+div{margin-top:27px}}
