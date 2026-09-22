@@ -1,0 +1,450 @@
+/* Technical hero layer: the existing copy and map remain the source of truth. */
+:root {
+  --hero-deep: #17291d;
+  --hero-ink: #203828;
+  --hero-panel: #1d3425;
+  --hero-paper: #f7f8f2;
+  --hero-lime: #d5e5a2;
+  --hero-sage: #9fb879;
+  --hero-line: rgba(213, 229, 162, .3);
+  --hero-faint: rgba(247, 248, 242, .1);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--hero-ink);
+  color: var(--hero-paper);
+  border: 1px solid rgba(32, 56, 40, .12);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  padding: clamp(.25rem, 1vw, 1rem) 0;
+}
+
+.hero h1 {
+  color: var(--hero-paper);
+  max-width: none;
+}
+
+.hero .hero-emphasis {
+  color: var(--hero-lime);
+}
+
+.hero-lede {
+  color: rgba(247, 248, 242, .75);
+}
+
+.hero .button-dark {
+  background: var(--hero-lime);
+  color: var(--hero-ink);
+  border-color: var(--hero-lime);
+}
+
+.hero .button-dark:hover {
+  background: #edf5c4;
+  color: var(--hero-ink);
+}
+
+.hero .text-link,
+.hero .hero-foot,
+.hero .hero-foot a {
+  color: var(--hero-paper);
+}
+
+.hero .text-link:hover,
+.hero .hero-foot a:hover {
+  color: var(--hero-lime);
+}
+
+.hero .hero-foot {
+  border-top-color: var(--hero-line);
+}
+
+.work-map {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: clamp(1rem, 2.8vw, 2rem);
+  background: var(--hero-panel);
+  border: 1px solid var(--hero-line);
+}
+
+.work-map h2 {
+  color: var(--hero-paper);
+  font-size: clamp(1.45rem, 2vw, 1.8rem);
+  margin-bottom: 1rem;
+}
+
+.hero-system {
+  display: block;
+  width: 100%;
+  margin: 0 0 1.1rem;
+}
+
+
+
+.system-diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+}
+
+.system-surface {
+  fill: var(--hero-deep);
+  stroke: rgba(213, 229, 162, .24);
+  stroke-width: 1;
+}
+
+.system-grid path {
+  fill: none;
+  stroke: rgba(213, 229, 162, .11);
+  stroke-width: 1;
+}
+
+.system-route path {
+  fill: none;
+  stroke: var(--hero-sage);
+  stroke-width: 1.5;
+  stroke-linecap: square;
+}
+
+.system-route-node {
+  fill: var(--hero-lime);
+  stroke: var(--hero-ink);
+  stroke-width: 2;
+}
+
+.hero-module {
+  opacity: 1;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: opacity .22s ease, transform .22s var(--ease);
+}
+
+.module-shadow {
+  fill: rgba(8, 20, 12, .46);
+  transform: translateY(6px);
+  filter: blur(3px);
+}
+
+.module-top {
+  fill: #6e8f5c;
+  stroke: var(--hero-lime);
+  stroke-opacity: .66;
+  stroke-width: 1;
+}
+
+.module-left {
+  fill: #34563b;
+  stroke: var(--hero-lime);
+  stroke-opacity: .45;
+  stroke-width: 1;
+}
+
+.module-right {
+  fill: #466b47;
+  stroke: var(--hero-lime);
+  stroke-opacity: .55;
+  stroke-width: 1;
+}
+
+.module-detail {
+  fill: none;
+  stroke: rgba(247, 248, 242, .38);
+  stroke-width: 1;
+}
+
+.module-port {
+  fill: var(--hero-lime);
+  stroke: var(--hero-deep);
+  stroke-width: 2;
+}
+
+.system-label {
+  fill: var(--hero-paper);
+  font: 600 13px/1 var(--sans);
+  letter-spacing: .09em;
+}
+
+.system-key {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .5rem;
+  margin-top: .3rem;
+  color: rgba(247, 248, 242, .72);
+  font-size: .8rem;
+  line-height: 1.35;
+}
+
+.system-key span {
+  display: flex;
+  align-items: baseline;
+  gap: .35rem;
+  min-width: 0;
+  border-top: 1px solid var(--hero-line);
+  padding-top: .45rem;
+}
+
+.system-key b {
+  color: var(--hero-sage);
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+
+.map-links {
+  margin-top: auto;
+}
+
+.map-links::before {
+  background: var(--hero-sage);
+  opacity: .8;
+}
+
+.map-links a {
+  color: var(--hero-paper);
+}
+
+.map-links a + a {
+  border-top-color: var(--hero-line);
+}
+
+.map-node {
+  background: var(--hero-lime);
+  border-color: var(--hero-deep);
+}
+
+.map-links a:hover,
+.map-links a:focus-visible,
+.map-links a.is-related {
+  color: var(--hero-lime);
+}
+
+.map-links a:hover .map-node,
+.map-links a:focus-visible .map-node,
+.map-links a.is-related .map-node {
+  background: var(--hero-paper);
+  border-color: var(--hero-paper);
+}
+
+.map-links small {
+  color: rgba(247, 248, 242, .61);
+}
+
+.map-caption {
+  color: rgba(247, 248, 242, .56);
+}
+
+.hero-system.has-related .hero-module:not(.is-related) {
+  opacity: .42;
+}
+
+.hero-system .hero-module.is-related {
+  filter: brightness(1.12);
+  transform: translateY(-3px);
+}
+
+.hero-system .system-key [data-system-key].is-related {
+  color: var(--hero-lime);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body:not([data-motion='reduce']) .hero-system.is-assembling .hero-module {
+    animation: hero-module-arrive .72s var(--ease) both;
+  }
+
+  body:not([data-motion='reduce']) .hero-system.is-assembling .hero-module[data-hero-part='contexto'] {
+    animation-delay: .08s;
+  }
+
+  body:not([data-motion='reduce']) .hero-system.is-assembling .hero-module[data-hero-part='agentes'] {
+    animation-delay: .16s;
+  }
+
+  body:not([data-motion='reduce']) .hero-system.is-assembling .hero-module[data-hero-part='decisiones'] {
+    animation-delay: .24s;
+  }
+
+  body:not([data-motion='reduce']) .hero-system.is-assembling .system-connector {
+    animation: hero-route-draw .7s var(--ease) both;
+  }
+
+  body:not([data-motion='reduce']) .hero-system.is-assembling .system-connector:nth-child(2) {
+    animation-delay: .1s;
+  }
+
+  body:not([data-motion='reduce']) .hero-system.is-assembling .system-connector:nth-child(3) {
+    animation-delay: .2s;
+  }
+
+  body:not([data-motion='reduce']) .hero-system.is-assembling .system-connector:nth-child(4) {
+    animation-delay: .3s;
+  }
+}
+
+@keyframes hero-module-arrive {
+  from { opacity: .12; transform: translateY(12px) scale(.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes hero-route-draw {
+  from { stroke-dasharray: 1; stroke-dashoffset: 1; opacity: .2; }
+  to { stroke-dasharray: 1; stroke-dashoffset: 0; opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-module,
+  .hero-system .system-key [data-system-key],
+  .map-links a,
+  .map-node {
+    transition-property: color, background-color, border-color;
+  }
+}
+
+body[data-motion='reduce'] .hero-module,
+body[data-motion='reduce'] .hero-system .system-key [data-system-key],
+body[data-motion='reduce'] .map-links a,
+body[data-motion='reduce'] .map-node {
+  transition-property: color, background-color, border-color;
+}
+
+@media (max-width: 1100px) {
+  .hero-system {
+    margin-bottom: .75rem;
+  }
+
+  .system-diagram {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding-top: 1.6rem;
+    background: var(--hero-ink);
+  }
+
+  .hero-copy {
+    padding: 0;
+  }
+
+  .work-map {
+    padding: 1.15rem;
+  }
+
+
+  .system-diagram {
+    min-height: 0;
+  }
+
+  .system-label {
+    font-size: 14px;
+  }
+
+  .system-key {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .6rem .75rem;
+    font-size: .8rem;
+  }
+
+  .system-key span {
+    padding-top: .38rem;
+  }
+
+  .map-links {
+    margin-top: .85rem;
+  }
+
+  .map-links a {
+    min-height: 4.65rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .work-map {
+    padding: 1rem .9rem;
+  }
+
+
+
+
+  .system-diagram {
+    min-height: 0;
+  }
+
+  .map-links strong {
+    font-size: .88rem;
+  }
+
+  .map-links small {
+    font-size: .7rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .work-map {
+    padding-inline: .8rem;
+  }
+
+  .system-diagram {
+    min-height: 0;
+  }
+
+  .system-key {
+    gap: .45rem .55rem;
+  }
+
+  .system-key span {
+    gap: .25rem;
+    font-size: .76rem;
+  }
+
+  .map-links a {
+    grid-template-columns: .6rem minmax(0, 1fr) 1rem;
+    gap: .75rem;
+  }
+}
+
+@media print {
+  .hero {
+    background: var(--lime);
+    color: var(--ink);
+  }
+
+  .hero h1,
+  .hero .text-link,
+  .hero .hero-foot,
+  .hero .hero-foot a,
+  .work-map h2,
+  .map-links a {
+    color: var(--ink);
+  }
+
+  .work-map {
+    background: transparent;
+    border-color: var(--line);
+  }
+}
+
+/* Final composition: readable propositions and a compact architecture model. */
+.hero{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:2rem 4rem;padding:3rem;border:0}
+.hero .hero-foot{margin-top:0}
+.hero :is(a,button):focus-visible{outline-color:var(--hero-lime)}
+.work-map{padding:1.5rem;border:0;border-radius:6px;background:var(--hero-deep)}
+.hero-system{margin-bottom:1rem}
+.system-diagram{max-height:220px}
+.system-surface{fill:var(--hero-panel)}
+.map-links a{min-height:4.5rem}
+.map-links small{font-size:.76rem}
+.map-caption{margin-top:1rem}
+@media(min-width:761px) and (max-width:1100px){.hero{gap:2rem;padding:2rem}.hero h1{font-size:clamp(3rem,6.8vw,5rem)}.work-map{padding:1.2rem}.work-map h2{font-size:1.4rem}.map-links strong{font-size:.88rem}.map-links small{font-size:.7rem}.system-key{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:2rem 1.5rem 1rem;gap:2rem}.work-map{padding:1rem}.system-diagram{max-height:none}.map-links small{font-size:.72rem}.hero h1{font-size:clamp(3.2rem,13vw,5.7rem)}}
+@media(prefers-reduced-motion:reduce){.hero-system .hero-module.is-related{transform:none}}
+body[data-motion=reduce] .hero-system .hero-module.is-related{transform:none}

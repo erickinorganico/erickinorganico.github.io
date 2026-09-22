@@ -1,0 +1,139 @@
+/* Technical precision, across an editorial portfolio. Hero composition lives in hero-system.css. */
+:root{--deep:#14281e;--technical-line:#8da780;--panel:#294334;--shadow:0 18px 44px -24px rgb(20 40 30 / .28)}
+.chapter-nav{background:var(--ink);color:var(--paper);border-bottom-color:var(--panel);gap:.35rem;padding-block:.55rem}
+.chapter-nav a{padding:.45rem .8rem;border-radius:3px;transition:background-color .22s,color .22s}
+.chapter-nav a::after{inset:auto .8rem .25rem;background:var(--lime)}
+.chapter-nav a:hover{color:var(--lime);background:var(--panel)}
+.chapter-nav a[aria-current]{color:var(--lime);background:var(--panel)}
+.chapter-nav a:focus-visible{outline-color:var(--lime);outline-offset:-2px}
+.section-aside h2{font-size:clamp(1.45rem,2.1vw,2rem);line-height:1.18}
+.section-aside p{line-height:1.7}
+.contribution-list article{position:relative;padding:1.8rem 0 1.8rem 4.6rem}
+.contribution-list article:first-child{padding-top:.3rem}
+.capability-mark{position:absolute;left:0;top:1.8rem;width:48px;height:48px;fill:none;stroke:var(--accent);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.contribution-list article:first-child .capability-mark{top:.3rem}
+.capability-mark .mark-plane{fill:var(--surface)}
+.contribution-list h3{font-size:clamp(1.5rem,2vw,1.9rem)}
+.contribution-links .text-link{font-size:.8rem}
+.practical-examples{padding-top:2.5rem}
+.service-example{transition:background-color .25s}
+.service-example[open]{background:var(--surface)}
+.service-example summary{padding-inline:1.15rem;gap:1rem}
+.example-icon{transition:transform .3s var(--ease)}
+.example-body{padding-bottom:2.2rem}
+.example-situation{font-size:1.14rem}
+.examples-next{margin-top:2rem}
+.cases{background:var(--white)}
+.case-filters{gap:.4rem;padding:.4rem;background:var(--surface);width:fit-content;max-width:100%;border-radius:6px}
+.case-filters button{border-color:transparent;border-radius:3px}
+.case-filters button:hover{background:var(--paper)}
+.case-filters button[aria-pressed=true]{background:var(--ink);color:var(--white)}
+.case{position:relative}
+.case summary{padding-block:1.85rem;padding-left:.8rem;transition:background-color .25s}
+.case summary:hover{background:var(--surface)}
+.case-title{transition:transform .3s var(--ease)}
+.case-title small{max-width:25ch}
+.case-no{font-family:ui-monospace,Consolas,monospace}
+.case[open]{background:var(--surface)}
+.case[open] .case-no{padding-left:0;color:var(--accent)}
+.case[open] .case-open{border-color:var(--accent)}
+.case-body h3{font-size:.8rem;color:var(--accent)}
+.case-body p{line-height:1.75}
+.case-note{margin-top:1.8rem}
+/* Native disclosures remain usable without JavaScript; JS only interpolates their height. */
+body[data-disclosure-motion] .case[open] .case-body{animation:none}
+.concepts{background:transparent;border:1px solid var(--line);border-radius:3px;padding:1.6rem 1.8rem}
+.value-columns>div{padding-block:1.5rem}
+.economic-lens{background:var(--paper)}
+.economics-topics dt{color:var(--accent)}
+.platform{background:var(--surface)}
+.infra-map{background:var(--white);border:0;border-radius:12px;box-shadow:var(--shadow);padding:2.5rem;margin-block:3.5rem}
+.infra-map-caption{padding-bottom:1.5rem;border-bottom:1px solid var(--line)}
+.infra-map-caption h3{font-size:1.5rem}
+.infra-stage-head>span{border-radius:4px;font-family:ui-monospace,Consolas,monospace;width:2rem;height:2rem}
+.infra-brands img[src$="/airbyte.svg"]{background:var(--ink);padding:3px;border-radius:3px}
+.infra-system{height:136px;margin-block:1.7rem;transition:transform .45s var(--ease)}
+.infra-transfer{top:7.5rem}
+.infra-chain [aria-current=step] .infra-system{transform:translateY(-4px)}
+.infra-chain [aria-current=step] .infra-shape{fill:var(--lime)}
+.infra-chain [aria-current=step] .infra-stage-head h4{color:var(--accent)}
+.infra-map-footer{margin-top:2.5rem}
+.editorial-grid article:first-child h3{font-size:2.3rem}
+/* Layered work surfaces, with legible schematic connections. No fabricated telemetry. */
+.agents.agent-lab{background:var(--deep)}
+.agent-workbench{background:var(--ink);border-color:var(--technical-line);border-radius:12px;padding:2.5rem}
+.agent-workbench-heading h3{font-size:1.5rem}
+.agent-workbench-heading p{color:var(--lime)}
+.agent-scenarios{border-color:var(--technical-line)}
+.agent-scenarios button{border-color:var(--technical-line);border-radius:4px}
+.agent-input{padding-block:2rem 1rem}
+.agent-pipeline{padding-block:2.7rem}
+.agent-pipeline svg{width:52px;height:52px;padding:4px;background:var(--deep);border-radius:4px;transition:background-color .2s,color .2s,transform .35s var(--ease)}
+.agent-pipeline li+li::before{top:1.6rem;width:calc(100% - 4.3rem);right:calc(50% + 2.15rem);background:var(--technical-line)}
+.agent-pipeline [aria-current=step] svg{outline:4px solid var(--lime);transform:translateY(-3px)}
+.agent-pipeline strong{font-size:.95rem}
+.agent-result{border-color:var(--technical-line);padding-top:2rem}
+.agent-packet{border-color:var(--technical-line)}
+.agent-result h4{font-size:1.35rem;line-height:1.4}
+.agent-playback{border-color:var(--technical-line)}
+.agent-playback button{border-radius:4px}
+.agent-practice dt{font-size:1.03rem}
+.training.training-lab{background:var(--paper)}
+.training-lab-screen{background:var(--ink);border:0;border-radius:12px;box-shadow:var(--shadow);padding:1rem;overflow:hidden}
+.training-lab-diagram{border-radius:5px}
+.training-lab-visual figcaption{font-size:1rem;max-width:42ch;margin-bottom:1.5rem}
+.training-lab-role-controls{gap:.4rem;padding:.4rem;background:var(--surface);border-radius:6px}
+.training-lab-role-controls button{border-color:transparent;border-radius:3px}
+.training-lab-stage{padding-top:2.7rem}
+.training-lab-scenario-code{font-size:.75rem}
+.training-lab-step{display:grid;place-items:center;padding:0;width:1.8rem;height:1.8rem;background:var(--ink);color:var(--lime);border-radius:3px}
+.training-lab-flow li{padding-top:1.4rem}
+.training-lab-checks{border-radius:4px}
+.training-lab-skill{background:var(--ink);color:var(--paper);border:0;border-radius:6px;padding:1.75rem}
+.training-lab-skill-label{color:var(--lime)}
+.training-lab-skill p{color:var(--paper)}
+.experience-list::before{background:var(--line);width:1px;left:.3rem}
+.experience-list article::before{width:.7rem;height:.7rem;background:var(--paper);outline:5px solid var(--paper)}
+.experience-list article:first-child::before{background:var(--accent);outline:5px solid var(--lime)}
+.experience-list article+article{padding-top:2.5rem}
+.experience-list article+article::before{top:3rem}
+.experience-list h2{font-size:2.3rem}
+.community-work{margin-top:2.5rem}
+.education{background:var(--paper)}
+.credential{padding:1.7rem .7rem 1.7rem 0;grid-template-columns:6.8rem 1fr;transition:background-color .2s,transform .25s var(--ease)}
+.issuer-logo{width:80px;height:52px}
+.credential h3{font-size:1.1rem}
+.credential:hover{background:var(--surface)}
+.credential-meta{margin-top:.3rem}
+.contact{background:var(--ink);color:var(--paper);padding-block:4.5rem;border-radius:4px}
+.contact h2 i{color:var(--lime)}
+.contact-copy{color:var(--line)}
+.contact .button-light{background:var(--lime);color:var(--ink);border-radius:3px}
+.contact .button-light:hover{background:var(--white)}
+.contact .pdf-link{color:var(--paper)}
+.contact :is(a,button):focus-visible{outline-color:var(--lime)}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){body:not([data-motion=reduce]) .case summary:hover .case-title{transform:translateX(4px)}body:not([data-motion=reduce]) .credential:hover{transform:translateX(3px)}}
+@media(max-width:1100px){.chapter-nav{padding-inline:1.4rem}.infra-map{padding:1.5rem}.agent-workbench{padding:1.75rem}.contribution-list article{padding-left:3.9rem}.capability-mark{width:40px;height:40px}}
+@media(max-width:1000px){.infra-system{height:80px;margin:0;width:88px}.infra-transfer{top:auto}.infra-map-footer{margin-top:1.8rem}.infra-map-caption{margin-bottom:1.8rem}}
+@media(max-width:760px){
+ .chapter-nav{padding-inline:.6rem;gap:.15rem}.chapter-nav a{padding-inline:.65rem}.chapter-nav a::after{left:.65rem;right:.65rem}
+ .section-aside h2{font-size:1.5rem}.section-aside p{font-size:.88rem}
+ .contribution-list article{padding:1.5rem 0 1.5rem 3.4rem}.capability-mark{width:36px;height:36px;top:1.5rem}.contribution-list article:first-child{padding-top:.3rem}.contribution-list h3{font-size:1.45rem}
+ .contribution-links{gap:.1rem 1rem}.contribution-links .text-link{font-size:.76rem}
+ .practical-examples{padding-top:2rem}.service-example summary{padding-inline:.55rem;gap:.7rem}.service-example summary h4{font-size:1.02rem}.example-body{padding-right:1rem}.example-situation{font-size:1rem}
+ .case-filters{padding:.25rem;gap:.2rem}.case-filters button{font-size:.71rem;padding:.55rem .6rem}
+ .case summary{padding:1.3rem .3rem}.case-title{font-size:1.04rem}.case-title small{max-width:none}.case-body p{font-size:.9rem}.concepts{padding:1.25rem}
+ .infra-map{padding:1.25rem;border-radius:8px;margin-block:2.5rem}.infra-map-caption h3{font-size:1.3rem}.infra-stage-content>p{font-size:.84rem}.editorial-grid article:first-child h3{font-size:1.8rem}
+ .agent-workbench{padding:1.2rem;border-radius:8px}.agent-workbench-heading h3{font-size:1.25rem}.agent-pipeline{padding-block:1.7rem .6rem}
+ .agent-pipeline svg{width:34px;height:34px;padding:2px}.agent-pipeline li+li::before{top:-1.1rem;width:1px;height:1.1rem;right:auto;left:1.2rem}.agent-pipeline [aria-current=step] svg{transform:none;outline-width:3px}
+ .agent-input{padding-top:1.6rem}.agent-result{padding-top:1.3rem}.agent-result h4{font-size:1.15rem}.agent-packet{border-left:0}.agent-practice dt{font-size:.98rem}
+ .training-lab-screen{border-radius:8px;padding:.5rem}.training-lab-visual figcaption{font-size:.9rem;margin-bottom:1rem}.training-lab-role-controls{justify-content:flex-start;gap:.15rem;padding:.25rem}.training-lab-role-controls button{font-size:.71rem}.training-lab-stage{padding-top:1.8rem}
+ .training-lab-skill{padding:1.4rem}.training-lab-step{font-size:.68rem;width:1.65rem;height:1.65rem}
+ .experience-list h2{font-size:1.8rem}.credential{grid-template-columns:5.1rem 1fr;gap:.7rem 1rem;padding-block:1.5rem}.issuer-logo{width:64px;height:44px}.credential h3{font-size:.96rem}
+ .contact{padding:2.75rem 1.5rem;gap:2rem}.contact h2{font-size:clamp(2.35rem,10vw,3.5rem)}
+}
+@media(max-width:360px){.contribution-list article{padding-left:0;padding-top:4.2rem}.contribution-list article:first-child{padding-top:3rem}.capability-mark{top:1.2rem}.contribution-list article:first-child .capability-mark{top:0}.infra-map{padding:1rem}.infra-system{width:62px;height:58px}.agent-workbench{padding:1rem}.agent-scenarios button{font-size:.71rem}.training-lab-role-controls button{font-size:.68rem;padding-inline:.5rem}}
+@media(prefers-reduced-motion:reduce){.case-title,.credential,.infra-system,.agent-pipeline svg,.example-icon{transition-property:color,background-color,border-color}.infra-chain [aria-current=step] .infra-system,.agent-pipeline [aria-current=step] svg{transform:none}}
+body[data-motion=reduce] :is(.case-title,.credential,.infra-system,.agent-pipeline svg,.example-icon){transition-property:color,background-color,border-color}
+body[data-motion=reduce] :is(.infra-chain [aria-current=step] .infra-system,.agent-pipeline [aria-current=step] svg){transform:none}
+@media print{.infra-map,.training-lab-screen{box-shadow:none}.contact,.agents.agent-lab,.agent-workbench{background:white;color:black}.contact .contact-copy,.contact .pdf-link{color:black}}
