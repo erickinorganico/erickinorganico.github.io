@@ -1,0 +1,1 @@
+document.querySelectorAll('.case summary').forEach((summary)=>{summary.addEventListener('click',()=>{const details=summary.parentElement;document.querySelectorAll('.case[open]').forEach((open)=>{if(open!==details)open.removeAttribute('open')})})});

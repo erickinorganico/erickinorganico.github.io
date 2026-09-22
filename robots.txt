@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://erickinorganico.github.io/sitemap.xml
