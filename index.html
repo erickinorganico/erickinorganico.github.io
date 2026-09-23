@@ -6,7 +6,7 @@
   <meta name="description" content="Erick Peralta conecta Growth y Product Analytics con infraestructura de analytics, dashboards, autoservicio y sistemas con agentes.">
   <title>Erick Peralta — Growth &amp; Product Analytics</title>
   <link rel="canonical" href="https://erickinorganico.github.io/">
-  <meta name="theme-color" content="#edf1df">
+  <meta name="theme-color" content="#101815">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_MX">
   <meta property="og:title" content="Erick Peralta | Growth &amp; Product Analytics">
@@ -23,12 +23,16 @@
   <link rel="stylesheet" href="infra-flow.css">
   <link rel="stylesheet" href="hero-system.css">
   <link rel="stylesheet" href="tech-polish.css">
+  <link rel="stylesheet" href="analytics-demo.css">
+  <link rel="stylesheet" href="immersive.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Erick Peralta","url":"https://erickinorganico.github.io/","sameAs":["https://www.linkedin.com/in/erickperalta5813/","https://github.com/erickinorganico"],"knowsAbout":["Growth Analytics","Product Analytics","SQL","dbt","Automatización con IA"]}</script>
   <script defer src="script.js"></script>
   <script defer src="agent-lab.js"></script>
   <script defer src="training-lab.js"></script>
   <script defer src="infra-flow.js"></script>
   <script defer src="hero-system.js"></script>
+  <script defer src="analytics-demo.js"></script>
+  <script defer src="immersive.js"></script>
 </head>
 <body>
   <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol><symbol id="icon-down" viewBox="0 0 24 24"><path d="M12 4v16m-7-7 7 7 7-7"/></symbol><symbol id="icon-plus" viewBox="0 0 24 24"><path d="M4 12h16M12 4v16"/></symbol></svg>
@@ -44,13 +48,19 @@
         <h1 id="hero-title"><span class="type-mask"><span>Growth &amp;</span></span> <span class="type-mask"><span>Product</span></span> <span class="type-mask"><span class="hero-emphasis">Analytics.</span></span></h1>
         <p class="hero-lede">Ayudo a equipos a decidir dónde crecer, construir una medición confiable y aplicar IA a su operación.</p>
         <div class="hero-actions"><a class="button button-dark" href="#casos">Explorar mi trabajo <svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a><a class="text-link" href="assets/erick-peralta-perfil.pdf" download="Erick-Peralta-Perfil.pdf">Perfil en PDF <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+        <a class="hero-lab-link" href="#laboratorio">Explora una decisión con datos <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
       </div>
       <aside class="work-map" aria-labelledby="map-title">
         <h2 id="map-title">Preguntas que<br> convierto en trabajo.</h2>
         <figure class="hero-system" data-hero-system aria-labelledby="hero-system-title">
+          <canvas class="signal-field" aria-hidden="true"></canvas>
           <svg class="system-diagram" viewBox="0 0 560 360" role="img" aria-labelledby="hero-system-title hero-system-description">
             <title id="hero-system-title">Sistema modular para convertir datos en decisiones</title>
             <desc id="hero-system-description">Cuatro piezas de construcción con botones de encaje, inspiradas en LEGO, conectan Datos, Contexto, Agentes y Decisiones.</desc>
+            <defs>
+              <linearGradient id="brick-material" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dbe8ac"/><stop offset=".48" stop-color="#8ea86b"/><stop offset="1" stop-color="#547039"/></linearGradient>
+              <linearGradient id="stud-material" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#ecf7c9"/><stop offset="1" stop-color="#a6be7e"/></linearGradient>
+            </defs>
             <rect class="system-surface" x="8" y="8" width="544" height="344" rx="2" />
             <g class="system-grid" aria-hidden="true">
               <path d="M34 277 190 198 526 198" />
@@ -132,7 +142,7 @@
       <div class="hero-foot"><p>Economista <span aria-hidden="true">/</span> Data Analyst → Head of Analytics en Torre</p><a href="#aportacion">Cómo puedo aportar <svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a></div>
     </section>
 
-    <nav class="chapter-nav" aria-label="Explorar el perfil"><a href="#aportacion">Cómo aporto</a><a href="#casos">14 casos</a><a href="#enfoque">Enfoque</a><a href="#economia">Economía</a><a href="#infraestructura">Infraestructura</a><a href="#agentes">Agentes e IA</a><a href="#capacitacion">Capacitación</a><a href="#trayectoria">Trayectoria</a><a href="#comunidad">Comunidad</a><a href="#formacion">Formación</a></nav>
+    <nav class="chapter-nav" aria-label="Explorar el perfil"><a href="#aportacion">Cómo aporto</a><a href="#laboratorio">Demo analytics</a><a href="#casos">14 casos</a><a href="#enfoque">Enfoque</a><a href="#economia">Economía</a><a href="#infraestructura">Infraestructura</a><a href="#agentes">Agentes e IA</a><a href="#capacitacion">Capacitación</a><a href="#trayectoria">Trayectoria</a><a href="#comunidad">Comunidad</a><a href="#formacion">Formación</a></nav>
 
     <section class="contribution section-rule" id="aportacion" aria-labelledby="contribution-title">
       <div class="section-aside"><h2 id="contribution-title">Lo que puedo aportar<br>  a tu equipo.</h2><p>Desde una función de Analytics, Growth o producto, o en una colaboración por proyecto.</p><p>Mi experiencia como Head of Analytics conecta prioridades de negocio, ejecución técnica y capacidades para otras personas.</p><a class="text-link" href="#ejemplos">Ver ejemplos prácticos <svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a></div>
@@ -143,7 +153,123 @@
       </div>
       <div class="practical-examples" id="ejemplos" aria-labelledby="examples-title"><div class="examples-heading"><h3 id="examples-title">Así se puede ver<br>  nuestro trabajo juntos.</h3><p>Ejemplos de apoyo para tu empresa o proyecto. Partimos de una necesidad concreta y adaptamos el alcance a tu equipo, tus datos y tu etapa.</p></div><div class="example-list"><details class="service-example" open><summary><span class="example-number" aria-hidden="true">01</span><h4>Capacitar a tu equipo en IA</h4><svg class="icon example-icon" aria-hidden="true"><use href="#icon-plus"/></svg></summary><div class="example-body"><p class="example-situation"><span>Tu situación</span>Tu equipo quiere usar IA, pero no sabe por dónde empezar ni cómo revisar sus respuestas.</p><div><dl><div><dt>Cómo te apoyo</dt><dd>Preparar talleres con ejercicios de su trabajo: dar contexto a la IA, usar agentes y skills, automatizar tareas y explorar datos con criterio.</dd></div><div><dt>Qué te llevas</dt><dd>Una sesión práctica, ejercicios resueltos y una guía reutilizable para seguir aplicando lo aprendido.</dd></div></dl><a class="text-link" href="#capacitacion">Conocer mi enfoque de capacitación <svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a></div></div></details><details class="service-example"><summary><span class="example-number" aria-hidden="true">02</span><h4>Automatizar reportes y tareas repetitivas</h4><svg class="icon example-icon" aria-hidden="true"><use href="#icon-plus"/></svg></summary><div class="example-body"><p class="example-situation"><span>Tu situación</span>Cada semana alguien descarga archivos, copia datos y arma el mismo reporte a mano.</p><div><dl><div><dt>Cómo te apoyo</dt><dd>Revisar el proceso, conectar sus fuentes y automatizar la limpieza, consolidación y preparación de reportes, con validaciones y revisión humana donde haga falta.</dd></div><div><dt>Qué te llevas</dt><dd>Un flujo documentado que puedas ejecutar de nuevo, con controles para detectar datos faltantes o resultados inesperados.</dd></div></dl><a class="text-link" href="#trayectoria">Ver mi experiencia en automatización <svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a></div></div></details><details class="service-example"><summary><span class="example-number" aria-hidden="true">03</span><h4>Crear análisis para decidir qué hacer</h4><svg class="icon example-icon" aria-hidden="true"><use href="#icon-plus"/></svg></summary><div class="example-body"><p class="example-situation"><span>Tu situación</span>Quieres entender por qué los clientes abandonan, dónde se pierde una conversión o qué segmento conviene priorizar.</p><div><dl><div><dt>Cómo te apoyo</dt><dd>Convertir la pregunta en un análisis de embudos, cohortes, retención o perfil de cliente ideal, revisando la calidad de los datos y los supuestos.</dd></div><div><dt>Qué te llevas</dt><dd>Un análisis reproducible, hallazgos explicados y recomendaciones priorizadas con sus límites y próximos pasos.</dd></div></dl><a class="text-link" href="#caso-6">Explorar el caso de perfil de cliente ideal <svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a></div></div></details><details class="service-example"><summary><span class="example-number" aria-hidden="true">04</span><h4>Crear y mantener dashboards útiles</h4><svg class="icon example-icon" aria-hidden="true"><use href="#icon-plus"/></svg></summary><div class="example-body"><p class="example-situation"><span>Tu situación</span>El equipo consulta varias hojas de cálculo y cada área presenta una cifra distinta.</p><div><dl><div><dt>Cómo te apoyo</dt><dd>Acordar indicadores y definiciones, construir tableros con filtros y dar mantenimiento a las consultas y a su actualización.</dd></div><div><dt>Qué te llevas</dt><dd>Un dashboard para tus decisiones habituales, un diccionario de métricas y una rutina de actualización y revisión.</dd></div></dl><a class="text-link" href="#caso-3">Ver mi trabajo con dashboards <svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a></div></div></details><details class="service-example"><summary><span class="example-number" aria-hidden="true">05</span><h4>Desarrollar agentes para tareas concretas</h4><svg class="icon example-icon" aria-hidden="true"><use href="#icon-plus"/></svg></summary><div class="example-body"><p class="example-situation"><span>Tu situación</span>Tu equipo repite investigaciones, revisiones de información o diagnósticos que requieren consultar varias fuentes.</p><div><dl><div><dt>Cómo te apoyo</dt><dd>Diseñar un agente con contexto, herramientas y skills para recopilar evidencia y preparar una respuesta o propuesta, con criterios de evaluación y supervisión.</dd></div><div><dt>Qué te llevas</dt><dd>Un agente para un alcance definido, instrucciones reutilizables, pruebas y reglas para escalar a una persona.</dd></div></dl><a class="text-link" href="#caso-5">Ver un caso de agentes aplicados <svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a></div></div></details><details class="service-example"><summary><span class="example-number" aria-hidden="true">06</span><h4>Ordenar tus datos y su infraestructura</h4><svg class="icon example-icon" aria-hidden="true"><use href="#icon-plus"/></svg></summary><div class="example-body"><p class="example-situation"><span>Tu situación</span>Un reporte se queda desactualizado, una consulta tarda demasiado o nadie sabe qué significa un campo.</p><div><dl><div><dt>Cómo te apoyo</dt><dd>Revisar el recorrido de los datos, diagnosticar problemas de actualización o rendimiento y documentar modelos, relaciones y métricas para facilitar el autoservicio.</dd></div><div><dt>Qué te llevas</dt><dd>Un diagnóstico priorizado, mejoras según el alcance acordado y documentación para consultar los datos con contexto.</dd></div></dl><a class="text-link" href="#infraestructura">Conocer mi trabajo en infraestructura <svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a></div></div></details></div><p class="examples-next">Podemos empezar por un taller, un diagnóstico o un proceso concreto.</p><a class="text-link" href="#contacto">Hablemos de tu proyecto <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
     </section>
-    <section class="cases section-rule" id="casos">
+    <section class="analytics-demo section-rule" id="laboratorio" aria-labelledby="analytics-demo-title">
+  <div class="analytics-demo-inner">
+    <div class="analytics-demo-intro">
+      <div>
+        <h2 id="analytics-demo-title">Explora los datos.<br><em>Encuentra el siguiente paso.</em></h2>
+      </div>
+      <div class="analytics-demo-intro-copy">
+        <p>Un embudo simple convierte una señal dispersa en una pregunta concreta: ¿en qué etapa se pierde el impulso y para qué segmento?</p>
+        <span class="analytics-demo-disclaimer">Demo interactiva · datos ilustrativos</span>
+      </div>
+    </div>
+
+    <div class="analytics-demo-panel" data-analytics-demo>
+      <div class="analytics-demo-panel-head">
+        <div>
+          <span class="analytics-demo-label">EMBUDO / SEGMENTOS</span>
+          <h3>¿Dónde se pierde el impulso?</h3>
+        </div>
+        <span class="analytics-demo-period">Escenario de muestra · 30 días</span>
+      </div>
+
+      <div class="analytics-demo-controls" role="group" aria-label="Elegir segmento" hidden>
+        <button type="button" data-analytics-segment="all" aria-pressed="true" aria-controls="analytics-demo-output">Todos</button>
+        <button type="button" data-analytics-segment="self-serve" aria-pressed="false" aria-controls="analytics-demo-output">Autogestión</button>
+        <button type="button" data-analytics-segment="enterprise" aria-pressed="false" aria-controls="analytics-demo-output">Venta asistida</button>
+      </div>
+
+      <div class="analytics-demo-workbench" id="analytics-demo-output">
+        <figure class="analytics-demo-chart">
+          <div class="analytics-demo-chart-head">
+            <div>
+              <span class="analytics-demo-label">VOLUMEN POR ETAPA</span>
+              <p>Las barras comparten escala para mostrar la caída entre etapas.</p>
+            </div>
+            <span class="analytics-demo-scale">máx. 1,240</span>
+          </div>
+          <svg class="analytics-demo-svg" viewBox="0 0 700 340" role="img" aria-labelledby="analytics-chart-title analytics-chart-desc">
+            <title id="analytics-chart-title">Embudo de conversión para todos los segmentos</title>
+            <desc id="analytics-chart-desc">1,240 visitas, 248 leads, 126 activaciones y 42 clientes. La conversión final es de 3.4 por ciento.</desc>
+            <g class="analytics-demo-axis" aria-hidden="true">
+              <line x1="155" y1="40" x2="545" y2="40"></line>
+              <line x1="155" y1="40" x2="155" y2="302"></line>
+              <line x1="350" y1="40" x2="350" y2="302"></line>
+              <line x1="545" y1="40" x2="545" y2="302"></line>
+              <text x="155" y="25">0</text>
+              <text x="350" y="25" text-anchor="middle">620</text>
+              <text x="545" y="25" text-anchor="end">1,240</text>
+            </g>
+            <g class="analytics-demo-row" data-analytics-row="visits">
+              <text class="analytics-demo-stage" x="0" y="78">Visitas</text>
+              <rect class="analytics-demo-track" x="155" y="55" width="390" height="30" rx="2"></rect>
+              <rect class="analytics-demo-bar" x="155" y="55" width="390" height="30" rx="2" style="--bar-scale:1"></rect>
+              <text class="analytics-demo-value" x="570" y="78" data-analytics-value="visits">1,240</text>
+            </g>
+            <g class="analytics-demo-row" data-analytics-row="leads">
+              <text class="analytics-demo-stage" x="0" y="142">Leads</text>
+              <rect class="analytics-demo-track" x="155" y="119" width="390" height="30" rx="2"></rect>
+              <rect class="analytics-demo-bar" x="155" y="119" width="390" height="30" rx="2" style="--bar-scale:.2"></rect>
+              <text class="analytics-demo-value" x="570" y="142" data-analytics-value="leads">248</text>
+            </g>
+            <g class="analytics-demo-row" data-analytics-row="activations">
+              <text class="analytics-demo-stage" x="0" y="206">Activación</text>
+              <rect class="analytics-demo-track" x="155" y="183" width="390" height="30" rx="2"></rect>
+              <rect class="analytics-demo-bar" x="155" y="183" width="390" height="30" rx="2" style="--bar-scale:.1016"></rect>
+              <text class="analytics-demo-value" x="570" y="206" data-analytics-value="activations">126</text>
+            </g>
+            <g class="analytics-demo-row" data-analytics-row="customers">
+              <text class="analytics-demo-stage" x="0" y="270">Clientes</text>
+              <rect class="analytics-demo-track" x="155" y="247" width="390" height="30" rx="2"></rect>
+              <rect class="analytics-demo-bar" x="155" y="247" width="390" height="30" rx="2" style="--bar-scale:.0339"></rect>
+              <text class="analytics-demo-value" x="570" y="270" data-analytics-value="customers">42</text>
+            </g>
+          </svg>
+          <div class="analytics-demo-mobile-chart" aria-label="Conteos del embudo para todos los segmentos">
+            <div class="analytics-demo-mobile-scale" aria-hidden="true"><span>0</span><span>1,240</span></div>
+            <div class="analytics-demo-mobile-row" data-analytics-mobile-row="visits">
+              <div class="analytics-demo-mobile-meta"><span>Visitas</span><strong data-analytics-mobile-value="visits">1,240</strong></div>
+              <div class="analytics-demo-mobile-track"><span class="analytics-demo-mobile-bar" data-analytics-mobile-bar="visits" style="--bar-scale:1"></span></div>
+            </div>
+            <div class="analytics-demo-mobile-row" data-analytics-mobile-row="leads">
+              <div class="analytics-demo-mobile-meta"><span>Leads</span><strong data-analytics-mobile-value="leads">248</strong></div>
+              <div class="analytics-demo-mobile-track"><span class="analytics-demo-mobile-bar" data-analytics-mobile-bar="leads" style="--bar-scale:.2"></span></div>
+            </div>
+            <div class="analytics-demo-mobile-row" data-analytics-mobile-row="activations">
+              <div class="analytics-demo-mobile-meta"><span>Activación</span><strong data-analytics-mobile-value="activations">126</strong></div>
+              <div class="analytics-demo-mobile-track"><span class="analytics-demo-mobile-bar" data-analytics-mobile-bar="activations" style="--bar-scale:.1016"></span></div>
+            </div>
+            <div class="analytics-demo-mobile-row" data-analytics-mobile-row="customers">
+              <div class="analytics-demo-mobile-meta"><span>Clientes</span><strong data-analytics-mobile-value="customers">42</strong></div>
+              <div class="analytics-demo-mobile-track"><span class="analytics-demo-mobile-bar" data-analytics-mobile-bar="customers" style="--bar-scale:.0339"></span></div>
+            </div>
+          </div>
+          <figcaption>Conteos absolutos por etapa · escala común sobre el mismo escenario ilustrativo.</figcaption>
+        </figure>
+
+        <aside class="analytics-demo-summary" aria-label="Resumen del segmento seleccionado">
+          <div class="analytics-demo-kpi">
+            <span class="analytics-demo-label">CONVERSIÓN FINAL</span>
+            <strong data-analytics-final>3.4%</strong>
+            <span>clientes / visitas</span>
+          </div>
+          <div class="analytics-demo-insight">
+            <span class="analytics-demo-label">LECTURA RÁPIDA</span>
+            <p data-analytics-insight>Todos convierte 3.4% de visitas en clientes. El mayor quiebre está en visitas → leads: solo 20.0% avanza a la siguiente etapa.</p>
+          </div>
+          <div class="analytics-demo-method">
+            <span class="analytics-demo-label">MÉTODO</span>
+            <p>La conversión se calcula como clientes ÷ visitas. La lectura señala una fricción para investigar; no representa actividad real.</p>
+          </div>
+        </aside>
+      </div>
+      <p class="analytics-demo-announcement" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+  </div>
+</section>
+
+<section class="cases section-rule" id="casos">
 
       <div class="case-intro"><h2>Trabajo que conecta<br> <i>negocio y ejecución.</i></h2><p>Experiencias que conectan preguntas de negocio, ejecución técnica y capacidades para el equipo.</p></div>
       <div class="case-filters" hidden aria-label="Filtrar casos"><button type="button" aria-controls="lista-casos" data-filter="all" aria-pressed="true">Todos <span>14</span></button><button type="button" aria-controls="lista-casos" data-filter="infra" aria-pressed="false">Infraestructura y BI</button><button type="button" aria-controls="lista-casos" data-filter="growth" aria-pressed="false">Growth y producto</button><button type="button" aria-controls="lista-casos" data-filter="ia" aria-pressed="false">Agentes</button><button type="button" aria-controls="lista-casos" data-filter="engineering" aria-pressed="false">Producto e ingeniería</button></div>
