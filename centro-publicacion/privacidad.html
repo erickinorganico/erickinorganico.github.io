@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cómo Centro local de publicación accede, usa, conserva y comparte datos de Google y YouTube.">
+  <title>Aviso de privacidad · Centro local de publicación</title>
+  <link rel="canonical" href="https://erickinorganico.github.io/centro-publicacion/privacidad.html">
+  <style>
+    :root { color-scheme: light; --ink: #18221e; --muted: #52615a; --line: #d9e1dc; --paper: #f7f9f7; --accent: #174e3a; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { width: min(820px, calc(100% - 2rem)); margin: 3rem auto; padding: clamp(1.25rem, 4vw, 3rem); background: #fff; border: 1px solid var(--line); border-radius: 1rem; }
+    h1, h2 { line-height: 1.2; letter-spacing: -.025em; }
+    h1 { margin: 0 0 .75rem; font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { margin: 2rem 0 .5rem; font-size: 1.2rem; }
+    p, li { max-width: 72ch; }
+    p { margin: .75rem 0; }
+    li + li { margin-top: .35rem; }
+    .eyebrow { color: var(--accent); font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .muted { color: var(--muted); }
+    a { color: var(--accent); text-underline-offset: .18em; overflow-wrap: anywhere; }
+    nav { display: flex; flex-wrap: wrap; gap: .8rem 1.4rem; margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+    footer { margin-top: 2rem; color: var(--muted); font-size: .9rem; }
+    :focus-visible { outline: 3px solid #a34e12; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Centro local de publicación</p>
+    <h1>Aviso de privacidad</h1>
+    <p>Última actualización: 2 de noviembre de 2026.</p>
+
+    <h2>Quién opera la aplicación</h2>
+    <p>Centro local de publicación es una herramienta local de uso privado operada por Erick Peralta (Pensamientos Inorgánicos). Está diseñada para operar canales del propio operador desde su equipo Windows; no se ofrece como servicio público ni se registran usuarios externos.</p>
+    <p>Contacto para consultas de privacidad: <a href="mailto:pensamientosinorganicos@gmail.com">pensamientosinorganicos@gmail.com</a>.</p>
+
+    <h2>Datos de Google y YouTube que se usan</h2>
+    <p>Cuando el operador conecta YouTube, la aplicación solicita los permisos <code>youtube.upload</code> y <code>youtube.readonly</code>. Para dar las funciones solicitadas, puede procesar:</p>
+    <ul>
+      <li>Datos de autorización OAuth, incluidos tokens de acceso y renovación.</li>
+      <li>Identificador y nombre del canal autorizado, para comprobar que corresponde al destino elegido.</li>
+      <li>El video seleccionado, sus metadatos y controles de publicación o programación que el operador aprobó.</li>
+      <li>El identificador, enlace y estado que devuelve YouTube para verificar esa operación.</li>
+    </ul>
+    <p>La aplicación usa estos datos sólo para conectar y comprobar el canal, cargar el video que se eligió y revisar su resultado. No los vende ni los usa para publicidad, perfilado o vigilancia. La aplicación no incorpora ni consulta modelos de inteligencia artificial y no utiliza estos datos para entrenarlos. No comparte datos de YouTube con otros destinatarios; la transmisión a Google y YouTube es necesaria para las funciones solicitadas.</p>
+    <p>El uso y la transferencia de información recibida de las API de Google cumplen la <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de datos de usuario de los servicios de API de Google</a>, incluidos sus requisitos de <em>Limited Use</em>.</p>
+
+    <h2>Envíos de red</h2>
+    <p>Durante la autorización, el navegador abre la página de consentimiento de Google. La aplicación intercambia el código y renueva los tokens con los endpoints oficiales de Google; las solicitudes de YouTube se envían a YouTube Data API. El video y los metadatos salen del equipo cuando el centro ejecuta la operación de carga o programación autorizada. Si se fija una fecha futura, YouTube recibe la solicitud y administra la publicación posterior conforme a sus propias funciones. El sitio informativo de esta página no recibe videos, tokens, copys, identificadores de canal ni calendarios.</p>
+    <p>El centro también tiene conexiones independientes para otras plataformas. En una operación dirigida a ellas, los materiales correspondientes se envían a la plataforma seleccionada; los detalles de acceso a datos de Google descritos aquí se limitan a la conexión Google/YouTube.</p>
+
+    <h2>Almacenamiento y conservación</h2>
+    <p>Los tokens de Google se cifran con Windows DPAPI y quedan en almacenamiento local asociado al usuario de Windows que autorizó la cuenta, fuera de OneDrive. Los medios, copys, fechas, identificadores, enlaces y recibos operativos se conservan localmente en los expedientes del operador. La aplicación no los sube a este sitio ni los elimina automáticamente.</p>
+    <p>La conexión local se conserva hasta que el operador la desconecta o la credencial deja de ser válida. Los archivos y recibos locales se administran manualmente en su almacenamiento. Google puede conservar información que ya recibió y YouTube conserva los videos o programaciones aceptados conforme a sus propios términos y controles.</p>
+
+    <h2>Revocación y eliminación</h2>
+    <p>El operador puede revocar el acceso de la aplicación desde <a href="https://myaccount.google.com/permissions">los permisos de su cuenta de Google</a> y quitar manualmente la credencial local del centro. Revocar o quitar esa credencial detiene el acceso futuro del centro; no borra publicaciones ni cancela programaciones que ya existan en YouTube. Esos elementos se administran desde YouTube Studio.</p>
+
+    <h2>Visita de estas páginas</h2>
+    <p>Estas páginas son HTML estático: no cargan scripts, analítica, formularios, píxeles ni contenido incrustado, y no establecen cookies propias. GitHub Pages aloja el sitio. GitHub informa que registra la dirección IP de quien visita un sitio Pages por motivos de seguridad; ese tratamiento se rige por la <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">documentación de GitHub Pages</a> y la <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">declaración de privacidad de GitHub</a>.</p>
+
+    <h2>Contacto</h2>
+    <p>Para solicitar información sobre esta aplicación o su tratamiento local de datos, escribe a <a href="mailto:pensamientosinorganicos@gmail.com">pensamientosinorganicos@gmail.com</a>.</p>
+    <nav aria-label="Documentos de la aplicación">
+      <a href="index.html">Información de la aplicación</a>
+      <a href="condiciones.html">Condiciones de uso</a>
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Google API Services User Data</a>
+    </nav>
+    <footer>Centro local de publicación · uso privado.</footer>
+  </main>
+</body>
+</html>
