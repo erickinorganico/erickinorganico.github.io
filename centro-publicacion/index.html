@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Información sobre Centro local de publicación, una aplicación local de uso privado para operar canales propios.">
+  <title>Centro local de publicación · Información</title>
+  <link rel="canonical" href="https://erickinorganico.github.io/centro-publicacion/">
+  <style>
+    :root { color-scheme: light; --ink: #18221e; --muted: #52615a; --line: #d9e1dc; --paper: #f7f9f7; --accent: #174e3a; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { width: min(760px, calc(100% - 2rem)); margin: 4rem auto; padding: clamp(1.25rem, 4vw, 3rem); background: #fff; border: 1px solid var(--line); border-radius: 1rem; }
+    h1, h2 { line-height: 1.2; letter-spacing: -.025em; }
+    h1 { margin: 0 0 .75rem; font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { margin: 2rem 0 .5rem; font-size: 1.2rem; }
+    p { margin: .75rem 0; }
+    .eyebrow { color: var(--accent); font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .muted { color: var(--muted); }
+    a { color: var(--accent); text-underline-offset: .18em; }
+    nav { display: flex; flex-wrap: wrap; gap: .8rem 1.4rem; margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+    footer { margin-top: 2rem; color: var(--muted); font-size: .9rem; }
+    :focus-visible { outline: 3px solid #a34e12; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Información de la aplicación</p>
+    <h1>Centro local de publicación</h1>
+    <p>Es una herramienta local de uso privado para preparar y operar publicaciones en canales controlados por su operador. No es un servicio disponible al público ni una plataforma de registro para terceros.</p>
+    <p>La conexión de Google se usa con YouTube Data API para identificar el canal autorizado, enviar videos y metadatos cuando el operador ejecuta una operación aprobada, y comprobar el resultado. La aplicación solicita únicamente estos permisos de YouTube:</p>
+    <ul>
+      <li><code>youtube.upload</code>: cargar los videos elegidos por el operador.</li>
+      <li><code>youtube.readonly</code>: comprobar la identidad del canal y leer los datos de estado necesarios para verificar una carga o programación.</li>
+    </ul>
+    <p>El centro conserva los archivos, textos, fechas, identificadores, enlaces y recibos de trabajo en el entorno local del operador. El token de Google se cifra con Windows DPAPI para el usuario de Windows que autorizó la conexión. Al cargar o programar en YouTube, el centro transmite sólo los datos necesarios para la operación que el operador autorizó; si se fija una fecha futura, YouTube recibe esa solicitud y controla la publicación posterior. La aplicación no vende esos datos ni los usa para publicidad: no incorpora ni consulta modelos de IA, y no incorpora analítica o telemetría propia.</p>
+    <p>El centro incluye conexiones separadas para otras plataformas. Este sitio describe el flujo de datos de Google/YouTube; cada plataforma recibe únicamente los materiales de las operaciones que el operador dirige a ella.</p>
+    <p>Operador y contacto: Erick Peralta, Pensamientos Inorgánicos — <a href="mailto:pensamientosinorganicos@gmail.com">pensamientosinorganicos@gmail.com</a>.</p>
+    <nav aria-label="Documentos de la aplicación">
+      <a href="privacidad.html">Aviso de privacidad</a>
+      <a href="condiciones.html">Condiciones de uso</a>
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de datos de usuario de Google API</a>
+    </nav>
+    <footer>Última actualización: 2 de noviembre de 2026.</footer>
+  </main>
+</body>
+</html>
